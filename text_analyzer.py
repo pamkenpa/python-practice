@@ -32,8 +32,49 @@ def count_words(text):
       count[word] = 1
   return count
 
-result = count_words(text)
+result = count_words(text.lower().strip("."))
 print(result)
+
+counts = result
+
+def most_common(counts):
+  most_common_word = None
+  highest_count = 0
+  for word, count in result.items():
+	    if count > highest_count:
+             highest_count = count
+             most_common_word = word
+  return most_common_word
+
+# result = most_common(counts)
+# print(result)
+
+
+
+def longest_word(result):
+  for word in result():
+      word = None
+      longest = result[word]
+      if len(word) > longest:
+         longest = word
+  return longest
+
+result = longest_word(result)
+print(result)
+      
+      
+      
+   
+
+      
+      
+
+
+
+
+
+
+
 
 
 
