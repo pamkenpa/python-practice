@@ -18,7 +18,7 @@ def is_available(books):
 
 def checkout_books(books, title):
     try:
-        if title in books and is_available:
+        if title in books and is_available(books[title]):
             details = books[title]
         return details["checked_out"] + 1 and True
     except KeyError:
