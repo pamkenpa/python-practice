@@ -35,4 +35,16 @@ def low_stock(inventory, threshold):
     return low
 
 print(low_stock(inventory, 16))
-            
+
+counts = {"the": 3, "cat": 2, "sat": 1}
+
+def most_common(counts):
+    highest = 0
+    top_word = None
+    for word, count in counts.items():
+        if count > highest:
+            highest = count
+            top_word = word 
+    return top_word
+        
+print(most_common(counts))
